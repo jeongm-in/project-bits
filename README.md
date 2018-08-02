@@ -8,4 +8,5 @@ Repository for miscellaneous projects
   - [공공데이터포털](https://data.go.kr)의 음양력 정보제공 서비스를 이용해서 제작하였습니다. 
   - 사용하실 때는 공공데이터포털에서 인증키를 발급받아서 코드 안에 넣어주세요. 
   - Build Environment : Python 3.7 / PyQt5 5.11.2 / requests 2.19.1
-  ![LDTGUI](https://raw.githubusercontent.com/jeongm/miscellaneous-bits/master/lunar_date_converter/lunar_date_converter.png)
+  
+  - ![LDTGUI](https://raw.githubusercontent.com/jeongm/miscellaneous-bits/master/lunar_date_converter/lunar_date_converter.png)
