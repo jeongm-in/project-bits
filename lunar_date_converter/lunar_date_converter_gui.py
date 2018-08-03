@@ -1,10 +1,11 @@
-from PyQt5.QtWidgets import (QPushButton, QLineEdit,
-                             QApplication, QLabel, QMessageBox,
-                             QMainWindow, QListWidget, QListWidgetItem)
-from PyQt5.QtCore import Qt
+import sys
 import requests
 import re
-import sys
+from PySide2.QtCore import Qt
+from PySide2.QtWidgets import (QPushButton, QLineEdit,
+                             QApplication, QLabel, QMessageBox,
+                             QMainWindow, QListWidget, QListWidgetItem)
+
 
 
 class MainFrame(QMainWindow):
@@ -85,8 +86,7 @@ class MainFrame(QMainWindow):
             return
 
         url = 'http://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getSolCalInfo'
-        # Replace user key below
-        personal_key = 'your_user_key_here' 
+        personal_key = 'your_user_key_here' 	
         lunar_input = self.user_date_input.text()
         lunar_month = lunar_input[4:6]
         lunar_day = lunar_input[6:]
