@@ -1,11 +1,9 @@
 import sys
-import requests
-import re
+from requests_xml import XMLSession
 from PySide2.QtCore import Qt
 from PySide2.QtWidgets import (QPushButton, QLineEdit,
-                             QApplication, QLabel, QMessageBox,
-                             QMainWindow, QListWidget, QListWidgetItem)
-
+                               QApplication, QLabel, QMessageBox,
+                               QMainWindow, QListWidget, QListWidgetItem)
 
 
 class MainFrame(QMainWindow):
@@ -86,7 +84,7 @@ class MainFrame(QMainWindow):
             return
 
         url = 'http://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getSolCalInfo'
-        personal_key = 'your_user_key_here' 	
+        personal_key = 'your_user_key_here'
         lunar_input = self.user_date_input.text()
         lunar_month = lunar_input[4:6]
         lunar_day = lunar_input[6:]
@@ -96,24 +94,18 @@ class MainFrame(QMainWindow):
             lunar_year = int(lunar_input[:4]) + int(i)
             query_params = '?lunYear={}&lunMonth={}&lunDay={}&ServiceKey={}'.format(lunar_year, lunar_month,
                                                                                     lunar_day, personal_key)
-
-            # TODO: parse xml file as a whole for better performance
-            r = requests.get(url + query_params)
-            raw_text = r.text
-
-            # TODO: use different method to extract date from xml, or at least use better regex
-            solar_day = re.search('<solDay>(\d\d)<\/solDay>', raw_text).group(1)
-            solar_month = re.search('<solMonth>(\d\d)<\/solMonth>', raw_text).group(1)
-            solar_week = re.search('<solWeek>(.+?)</solWeek>', raw_text).group(1)
-            solar_year = re.search('<solYear>(\d\d\d\d)<\/solYear>', raw_text).group(1)
+            session = XMLSession()
+            r = session.get(url + query_params)
+            solar_day = r.xml.xpath('//solDay', first=True).text
+            solar_month = r.xml.xpath('//solMonth', first=True).text
+            solar_year = r.xml.xpath('//solYear', first=True).text
+            solar_week = r.xml.xpath('//solWeek', first=True).text
             solar_date_text = '   {}년 {}월 {}일 {}요일 '.format(solar_year, solar_month, solar_day, solar_week)
 
             QListWidgetItem(solar_date_text, self.result_console)
 
     def create_ics_file(self):
         event_name = self.user_event_name.text()
-        # TODO: use different method to extract date from QListWidgetItem, or at least use better regex
-        ics_date_capture = re.compile('(\d\d\d\d).+?(\d\d).+?(\d\d)')
         ics_content = 'BEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nBEGIN:VTIMEZONE\nTZID:Asia/Tokyo\n' \
                       'TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Tokyo\nX-LIC-LOCATION:Asia/Tokyo\n' \
                       'BEGIN:STANDARD\nTZOFFSETFROM:+0900\nTZOFFSETTO:+0900\nTZNAME:JST\n' \
@@ -126,14 +118,14 @@ class MainFrame(QMainWindow):
             reply = QMessageBox.question(self, 'Error', "날짜 계산을 먼저 해주십시오.", QMessageBox.Close)
             return
 
-        # https://stackoverflow.com/a/34479509
+        # Iterate through QListWidget items: https://stackoverflow.com/a/34479509
         converted_dates = [str(self.result_console.item(i).text()) for i in range(self.result_console.count())]
         for i in converted_dates:
+            # Extract digits from string: https://stackoverflow.com/a/26825833
+            date_string = (''.join(filter(str.isdigit, i)))
             event_string = 'BEGIN:VEVENT\nDTSTAMP:20180802T115053z\nDTSTART;TZID="Asia/Tokyo":{0}T120000' \
                            '\nDTEND;TZID="Asia/Tokyo":{0}T120000\nSUMMARY:{1}\nBEGIN:VALARM\n' \
                            'TRIGGER:-PT14H\nREPEAT:1\nACTION:DISPLAY\nDESCRIPTION:Reminder\nEND:VALARM\nEND:VEVENT\n'
-            result = ics_date_capture.search(i)
-            date_string = result.group(1) + result.group(2) + result.group(3)
             ics_content += event_string.format(date_string, event_name)
 
         ics_content += 'END:VCALENDAR'
