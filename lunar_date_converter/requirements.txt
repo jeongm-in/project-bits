@@ -1,12 +1,2 @@
-altgraph==0.16.1
-certifi==2018.4.16
-chardet==3.0.4
-future==0.16.0
-idna==2.7
-macholib==1.10
-pefile==2017.11.5
-pypiwin32==223
 PySide2==5.11.1
-pywin32==223
-requests==2.19.1
-urllib3==1.23
+requests-xml==0.2.3
