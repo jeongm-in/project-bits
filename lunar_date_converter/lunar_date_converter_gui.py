@@ -84,7 +84,7 @@ class MainFrame(QMainWindow):
             return
 
         url = 'http://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getSolCalInfo'
-        personal_key = 'your_user_key_here'
+        personal_key = 'UrEdHGIOCJr600RsRQ%2BnoL2wma3HT9JXmYn0uhHwmxImsnE2GHKYfn1RUfiEK9RIHXPJ3FBRnONxXMjplU3%2F7g%3D%3D'
         lunar_input = self.user_date_input.text()
         lunar_month = lunar_input[4:6]
         lunar_day = lunar_input[6:]
@@ -92,6 +92,10 @@ class MainFrame(QMainWindow):
 
         for i in range(0, repeat):
             lunar_year = int(lunar_input[:4]) + int(i)
+            # Limit search at lunar year 2050.
+            if lunar_year > 2050:
+                break
+
             query_params = '?lunYear={}&lunMonth={}&lunDay={}&ServiceKey={}'.format(lunar_year, lunar_month,
                                                                                     lunar_day, personal_key)
             session = XMLSession()
