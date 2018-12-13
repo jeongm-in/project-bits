@@ -2,7 +2,7 @@
 Repository for miscellaneous projects
 
 # contents
-- 음력 날짜 계산기 | Lunar Date Converter
+## 음력 날짜 계산기 | Lunar Date Converter
   - A program to easily convert lunar dates to solar dates. Can also export results to .ics file.
   - Supports dates upto lunar year 2050.
   - 매년 반복되는 음력 생일을 일일히 검색해서 달력에 넣기 귀찮아서 몇년치를 한번에 검색해서 [.ics파일](https://en.wikipedia.org/wiki/ICalendar)로 내보낼 수 있는 프로그램을 만들었습니다. 
