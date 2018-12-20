@@ -5,6 +5,10 @@ from shutil import copyfile
 # TODO: images normally come in two resolution: mobile and desktop
 # Measure the picture sizes and ask user which image size to keep. (1, 2, or both)
 # Mobile images are narrow and tall, desktop images are wide
+# TODO: Ask which system drive user's system drive is
+# TODO: Show default dir and prompt user if he or she wants to change it to custom
+# TODO: Detect user OS and abort if not windows
+# TODO: add known icon files in tuple to filter
 
 your_username = getpass.getuser()
 prompt = 'Is "{}" your username? (y / n): '.format(your_username)
@@ -17,7 +21,7 @@ if raw_is_correct_username == 'y':
     name_list = os.listdir(file_dir)
     dst_common = 'C:/Users/{}/Documents/Windows_spotlight/'.format(your_username)
     src_common = os.getcwd()
-    for index, file in enumerate(name_list):
+    for file in name_list:
         src = file_dir + '/' + file
         stat_info = os.stat(src)
         file_size = stat_info.st_size
