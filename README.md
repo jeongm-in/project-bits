@@ -21,5 +21,21 @@ Repository for miscellaneous projects
   - API key from [Public Data Portal](https://data.go.kr)
 
 ## Windows Lockscreen Image Crawler
+### Overview
+  - Windows 10 by default ships with beautiful image slide shows (spotlight). 
+  - I wanted to save those images so that I could use them as my desktop background.
+  - This is a python script file that saves all windows spotlight lockscreen images into a designated directory in Documents. 
+  
+### Miscellaneous Details
+  - Windows 10 saves miscellaneous image files, including the files for the lockscreen slide show, in a local directory under `Users/name/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager/_cw5n1h2txyewy/LocalState/Assets`
+  - Windows 10 spotlight saves both landscape (1920 * 1080) and portrait (1080 * 1920) sized images
+  - Windows 10 also saves icon files for __default__ apps such as Candy Crush Saga
+  - This script filters out icon files and asks user which image dimensions to save. 
+### Todo
+  - Create GUI file to get rid of all the commandline interaction
+  - Add feature for an one-time installation and regular automatic save
+### requirements 
+  - Python==3.6.7 or above / Pillow==5.3.0
+  - __Windows 10__
 
 ## Multi-Tools Page
