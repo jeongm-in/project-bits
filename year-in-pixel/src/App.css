@@ -1,0 +1,62 @@
+
+.front-bg{
+   
+    background-color: antiquewhite;
+    width:100vw;
+    height:100vh;
+  
+}
+.front-box-parent{
+    width:100vw;
+    height:100vh;
+}
+
+.year-pixel{
+    width:40vw;
+    height:96vh;
+    font-size:0.75vw;
+    text-align:center;
+    background-color:#d1ccc0;
+
+}
+.year-table{
+    border:0.1vw solid black;
+    background-color:#f7f1e3;
+}
+.cell-size{
+    width:1.375vw !important;
+    height: 1.375vw !important;
+    border:0.1vw solid black;
+    
+}
+.cell-invalid{
+    background-color:black;
+}
+.year-legend{
+    width:10vw;
+    height:20vh;
+}
+
+.year-legend-row{
+    width:10vw;
+    height:3vh;
+    font-size: 1.5vw;
+    text-align:left;
+}
+
+.year-legend-color{
+    width:3vh;
+    height:3vh;
+    margin-right:2vw;
+}
+
+.count{
+    width:40vw;
+    height:40vh;
+    border: 0.125vh double white;
+}
+
+.nav-bar-bg{
+    background-color:transparent;
+  }
+  
