@@ -1,4 +1,5 @@
 import React from 'react';
+import fire from '../Fire';
 class Year extends React.Component {
     constructor(props) {
         super(props);
@@ -27,14 +28,17 @@ class Year extends React.Component {
             },
             moodName:{
                 
-            }
+            },
+            year:'',
 
         }
         this.onClick = this.onClick.bind(this);
         this.doNothing = this.doNothing.bind(this);
         this.onDoubleClick = this.onDoubleClick.bind(this);
-
+        this.loadYear = this.loadYear.bind(this);
     }
+
+    
 
     onDoubleClick=(event)=>{
         event.preventDefault();
@@ -57,6 +61,28 @@ class Year extends React.Component {
     doNothing=event=>{
 
     }
+           
+    componentDidMount(){
+        this.loadYear();
+    }
+    
+    loadYear(){
+        var yearRef = fire.database().ref('users/0/jeongmin/year');
+        let moodYear= 100;
+        yearRef.on('value',function(snapshot){
+            moodYear = snapshot.val();
+            console.log(snapshot.val());
+            // console.log(moodYear);
+            // myMood = snapshot.val();           
+        }, function(error){
+            console.log('error:'+error.code);
+        });
+        console.log(this.state.year);
+        this.setState({year:moodYear});
+        console.log(this.state.year);
+    }
+
+
 
     render() {
         let monthTitle = [];
@@ -100,8 +126,7 @@ class Year extends React.Component {
                 </div>    
             </div>);
         }
-
-
+        
         return (
             <div className="year-pixel d-flex flex-row
              justify-content-around align-items-center">
@@ -115,6 +140,7 @@ class Year extends React.Component {
                     </tbody>
                 </table>
                 <div className='year-legend d-flex flex-column justify-content-around align-items-center'>
+                    <div className = "front-year-text">{this.state.year}</div>
                     {moodLegend}
                 </div>
             </div>

@@ -1,31 +1,30 @@
 
 .front-bg{
-   
     background-color: antiquewhite;
     width:100vw;
     height:100vh;
-  
+    
 }
 .front-box-parent{
-    width:100vw;
+    width:60vw;
     height:100vh;
 }
 
 .year-pixel{
-    width:40vw;
+    width:36vw;
     height:96vh;
     font-size:0.75vw;
     text-align:center;
-    background-color:#d1ccc0;
+    background-color:#f1f2f6;
 
 }
 .year-table{
     border:0.1vw solid black;
-    background-color:#f7f1e3;
+    background-color:#dfe4ea;
 }
 .cell-size{
-    width:1.375vw !important;
-    height: 1.375vw !important;
+    width:1.25vw !important;
+    height: 1.25vw !important;
     border:0.1vw solid black;
     
 }
@@ -50,10 +49,20 @@
     margin-right:2vw;
 }
 
-.count{
-    width:40vw;
-    height:40vh;
+.front-parent{
+    width:25vw;
+    height:96vh;
     border: 0.125vh double white;
+    font-family: 'VT323', monospace;
+}
+
+.front-title-text{
+    font-family: 'VT323', monospace;
+    font-size:3vw;
+}
+
+.front-year-text{
+    font-size: 2vw;
 }
 
 .nav-bar-bg{

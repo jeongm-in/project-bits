@@ -6,7 +6,26 @@ class Front extends React.Component {
 
     render() {
         return (
-            <div className="count"></div>
+            <div className="front-parent d-flex flex-column
+            justify-content-between align-items-center">
+                <div className = "front-title-box">
+                <div className = "front-title-text">
+                    Year in Pixels
+                </div>
+                </div>
+                <div className = "front-other-box d-flex flex-column justify-content-between align-items-ceneter">
+                    <div>
+
+                    </div>
+                </div>
+                <div className = 'front-other-footer d-flex flex-row'>
+                <div>#YearInPixels by Camille</div>&nbsp;
+                    <a href="https://www.instagram.com/passioncarnets/">(@passioncarnets)</a>
+                </div>
+            
+            
+            
+            </div>
         );
     }
 }
