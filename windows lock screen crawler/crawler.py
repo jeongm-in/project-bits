@@ -4,6 +4,7 @@ from shutil import copyfile
 import platform
 import sys
 from PIL import Image
+import json
 
 # TODO IDEA: Initial setup to set export directories and choose correct username, and automatically run every week or so
 # external library needed? Pillow (PIL)
@@ -19,14 +20,22 @@ if not is_Windows:
     input('Press any key to continue.')
     sys.exit()
 
+# Check for silent mode
+with open('setting.json') as s:
+    setting = json.load(s)
+
+
 # Check for username
 your_username = getpass.getuser()
-prompt = 'Script detected "{}" is your username. Type "n" if incorrect. Press any key to continue...: '.format(your_username)
-raw_is_correct_username = input(prompt)
 
-# Prompt user to input username if the name script found is not the user's username
-if raw_is_correct_username == 'n':
-    your_username = input('Please enter your username under C://Users/ directory: ')
+if not setting['silent']:
+    prompt = 'Script detected "{}" is your username. Type "n" if incorrect. Press any key to continue...: '.format(
+        your_username)
+    raw_is_correct_username = input(prompt)
+
+    # Prompt user to input username if the name script found is not the user's username
+    if raw_is_correct_username == 'n':
+        your_username = input('Please enter your username under C://Users/ directory: ')
 
 # Process file and copy
 file_dir = '{}/Users/{}/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager' \
@@ -50,9 +59,13 @@ dst_common = '{}/Users/{}/Documents/Windows_spotlight/'.format(drive_letter, you
 # Wallpapers are generally 1920*1080 and 1080*1920
 
 save_option = 0
-while save_option not in ['1', '2', '3']:
-    save_option = input('Which resolution would you save? \n1: Landscape (1920 * 1080)'
-                        '\n2: Portrait (1080*1920)\n3: Both\n')
+# Check for silent, and if true then use orientation settings
+if setting['silent']:
+    save_option = setting['orientation']
+else:
+    while save_option not in ['1', '2', '3']:
+        save_option = input('Which resolution would you save? \n1: Landscape (1920 * 1080)'
+                            '\n2: Portrait (1080*1920)\n3: Both\n')
 
 # Iterate through the target folder and copy any possible images.
 for file in name_list:
@@ -85,7 +98,6 @@ for file in name_list:
             os.makedirs(dst_common)
 
         copyfile(src, dst)
-
 
 # Open the directory where the files are copied, and terminate the program
 path = os.path.realpath(dst_common)
