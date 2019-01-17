@@ -87,9 +87,11 @@ for file in name_list:
             continue
 
         # save only desired resolutions
+        # portrait
         if save_option == '1':
             if width < height:
                 continue
+        # landscape
         elif save_option == '2':
             if width > height:
                 continue
@@ -101,5 +103,7 @@ for file in name_list:
 
 # Open the directory where the files are copied, and terminate the program
 path = os.path.realpath(dst_common)
-os.startfile(path)
+if setting['silent']:
+    os.startfile(path)
+
 sys.exit()
