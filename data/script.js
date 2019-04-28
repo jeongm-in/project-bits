@@ -118,9 +118,19 @@ const HELL = {
 }
 
 
-let ak = document.getElementsByClassName("idd")[0].value;
+let reload = ()=>{
+    let ak = document.getElementsByClassName("idd")[0].value;
+    const thisHell = HELL[ak];
+    document.getElementById('title').innerHTML = thisHell['title'];
+    document.getElementById('description').innerHTML = thisHell['description'];
+}
 
-const thisHell = HELL[ak];
+reload();
 
-document.getElementById('title').innerHTML = thisHell['title'];
-document.getElementById('description').innerHTML = thisHell['description'];
+document.getElementById("btn-right").addEventListener('click',()=>{
+    alert("aa");
+    let index = document.getElementsByClassName("idd")[0].value;
+    index = (index + 1) % 30;
+    document.getElementsByClassName("idd")[0].value = index;
+    reload();
+}, false);
