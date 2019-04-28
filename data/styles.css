@@ -13,4 +13,5 @@
  #wrapper{
      width:90vw;
      height:80vh;
+     border:0.1vw solid black;
  }
