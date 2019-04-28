@@ -1,0 +1,16 @@
+ #title {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+ }
+
+ #description {
+     font-family: Georgia, 'Times New Roman', Times, serif
+ }
+
+ body{
+     overflow-y:hidden;
+ }
+
+ #wrapper{
+     width:90vw;
+     height:80vh;
+ }
