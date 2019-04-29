@@ -8,13 +8,13 @@ let HELL = {
     "1": {
         "title": "Karmascope Terrace",
         "subitle": "High hung mirror that shines on all people of the world.",
-        "description": "Karmascope will show any good and evil, merit and misstep without discrepancy. You may have a mouth of steel and deny anything, but you cannot deny the obvious facts shown on the mirror. If you were filial to your ancestors, your face will be reflected on your own and virtuous light will pervade the entire world of darkness. You may bypass all the purgatory and reborn as human again. If you lived life full of evil, never respected parents and elders, you may reborn as an animal or sink down to hell and pay your price depending on your karma.",
+        "description": "Karmascope will show any good and evil, merit and misstep without discrepancy. You may have a mouth of steel and deny anything, but you cannot deny the obvious facts shown in the mirror. If you were filial to your ancestors, your face will be reflected on your own and virtuous light will pervade the entire world of darkness. You may bypass all the purgatory and reborn as human again. If you lived a life full of evil, never respected parents and elders, you may reborn as an animal or sink down to hell and pay your price depending on your karma.",
         "marked": "safe"
     },
     "2": {
         "title": "Wasted Money Mountain",
         "subitle": "Mountain of paper money towering ten thousand feet.",
-        "description": "Stupid and foolish people who accumulated bad karma burn paper money in a futile attempt to redeem their sins after death. All those useless moneys are piled up here. This is a reminder that you need good merit, not fake paper money."
+        "description": "Stupid and foolish people who accumulated bad karma burn paper money in a futile attempt to redeem their sins after death. All those useless amounts of money are piled up here. This is a reminder that you need good merit, not fake paper money."
         , "marked": "false"
     },
     "3": {
@@ -44,7 +44,7 @@ let HELL = {
     "7": {
         "title": "Vats of Boiling Oil",
         "subitle": "Vats of boliling oil where sinners are pushed into.",
-        "description": "Sinners are pushed into the vats of oil with pitchforks. Their flesh would dissolve and bones would melt. If you were delighted in buying fishes and animals, cut them up and dumped in a pan of oil to cook and roast, you should pay back the lives of these creatures. All you cared about was your own tounges and stomaches, without any considerations to the virtue of loving life. It pleased your palate to cook sentient beings while you lived. Now you shall be fried yourself."
+        "description": "Sinners are pushed into the vats of oil with pitchforks. Their flesh would dissolve and bones would melt. If you were delighted in buying fishes and animals, cut them up and dumped in a pan of oil to cook and roast, you should pay back the lives of these creatures. All you cared about was your own tounges and stomachs, without any considerations to the virtue of loving life. It pleased your palate to cook sentient beings while you lived. Now you shall be fried yourself."
         , "marked": "false"
     },
     "8": {
@@ -56,7 +56,7 @@ let HELL = {
     "9": {
         "title": "Slippery Oil Mountain",
         "subitle": "Mountain covered in oily sand and gravel, with no grass or trees.",
-        "description": "Sinful souls are forced to climb the mountain only to slip to the bottom and then beaten. If you had plenty of money but refused to build bridtes, repair roads, donate oil for lamps to light the roads, refused to yield to elderly and handicapped, or leveled grave mounds for personal use, you shall climb this mountain for eternity."
+        "description": "Sinful souls are forced to climb the mountain only to slip to the bottom and then beaten. If you had plenty of money but refused to build bridges, repair roads, donate oil for lamps to light the roads, refused to yield to elderly and handicapped, or leveled grave mounds for personal use, you shall climb this mountain for eternity."
         , "marked": "false"
     },
     "10": {
@@ -74,7 +74,7 @@ let HELL = {
     "12": {
         "title": "City of People Who Died Unjustly",
         "subitle": "City full of people with wrongful death",
-        "description": "All wronged souls who have been hindered by their karma are sent here. Those who were killed by others, flood and fire, rage and frustration, suicide shall stay in this somber city until the cycle of enmity and revenge has been cleared. Only after then they would have their cases decided on. All wrongs are revenged and all feuds are played out eventually."
+        "description": "All wronged souls who have been hindered by their karma are sent here. Those who were killed by others, flood and fire, rage and frustration, suicide shall stay in this somber city until the cycle of enmity and revenge has been cleared. Only after then they would have their cases decided on. All wrongs are avenged and all feuds are played out eventually."
         , "marked": "safe"
     },
     "13": {
@@ -110,19 +110,19 @@ let HELL = {
     "18": {
         "title": "Upside-Down Grinder",
         "subitle": "Grinder where sinners are fed head to toe",
-        "description": "Sinners who did not venerate the Three Jewels, slandered the true teaching, bullyed the good and virtuous, envied the rich and reviled the poor, and schemed to deceive the weak are sent here. Their guts will shatter, skin and flesh will turn into pulp, and bones will turn into frost."
+        "description": "Sinners who did not venerate the Three Jewels, slandered the true teaching, bullied the good and virtuous, envied the rich and reviled the poor, and schemed to deceive the weak are sent here. Their guts will shatter, skin and flesh will turn into pulp, and bones will turn into frost."
         , "marked": "false"
     },
     "19": {
         "title": "Granny Meng's Cottage",
         "subitle": "Great hall with a terrace on either side with people drinking tea.",
-        "description": "This is the last place souls who goes through purgatory visits before crossing the Alas River. Granny Meng collected all of the herbs of the whole wide world and produces combination of teas. Granny Meng's brew confuses the soul. If you were evil, you will lose knowledge of former lives. If you followed the way but later neglected, you are brought back to the world of light and die soon again. Then you will be sentenced to torture. Finally if your root and practice are solid, your knowledge shall remain."
+        "description": "This is the last place souls who go through purgatory visits before crossing the Alas River. Granny Meng collected all of the herbs of the whole wide world and produces a combination of teas. Granny Meng's brew confuses the soul. If you were evil, you will lose knowledge of former lives. If you followed the way but later neglected, you are brought back to the world of light and die soon again. Then you will be sentenced to torture. Finally, if your root and practice are solid, your knowledge shall remain."
         , "marked": "safe"
     },
     "20": {
         "title": "Bridge Across Alas River",
-        "subitle": "A bridge 81 rods long but only one and three tenths of an inch wide.",
-        "description": "One last step remains till your reincarnation; Crossing the Alas River. Treacherous, greedy, devilish, deceitful, violent, and cruel souls are beat with iron cudgels and forced to climb up the bridge. They will soon fall into the river, and will be grabbed and devoured by a frenzy of poisionus snakes. Crabs and fish will block your way. If you were fillial, brotherly, loyal, true to your word, decent, and righteous, divine immortals will guide your way across the river. "
+        "subitle": "A bridge 81 rods long but only one and three-tenths of an inch wide.",
+        "description": "One last step remains till your reincarnation; Crossing the Alas River. Treacherous, greedy, devilish, deceitful, violent, and cruel souls are beaten with iron cudgels and forced to climb up the bridge. They will soon fall into the river and will be grabbed and devoured by a frenzy of poisonous snakes. Crabs and fish will block your way. If you were filial, brotherly, loyal, true to your word, decent, and righteous, divine immortals will guide your way across the river. "
         , "marked": "safe"
     }
 }
@@ -131,16 +131,16 @@ let HELL = {
 const SIX_PATH = {
     "0": {
         "title": "Path of Gold",
-        "description": "You have practiced good deeds and established all kinds of hidden merits. You will rebon as human and become high officials and eminient nobles to serve as rulers and magistrates."
+        "description": "You have practiced good deeds and established all kinds of hidden merits. You will reborn as human and become high officials and eminent nobles to serve as rulers and magistrates."
     },
     "1": {
         "title": "Path of Silver",
-        "description": "You were always on guard, circumespect in actions and lived a pure and unblemished life. You will reborn as human, dress in silks and satins, and dwell in water pavillions and shady kiosks."
+        "description": "You were always on guard, circumspect in actions and lived a pure and unblemished life. You will reborn as a human, dress in silks and satins, and dwell in water pavilions and shady kiosks."
     },
     "2": {
         "title": "Path of Jade",
 
-        "description": "You will reborn as human, but will born hunchbacked, handicapped, or even blind. You will have to beg for food on the streets."
+        "description": "You will reborn as a human, but will be born hunchbacked, handicapped, or even blind. You will have to beg for food on the streets."
     },
     "3": {
         "title": "Path of Bronze",
@@ -148,11 +148,11 @@ const SIX_PATH = {
     },
     "4": {
         "title": "Path of Stone",
-        "description": "You realied on your wealth and power to act arbitrarily. You committed adultery, ignored generational distinctions and engaged in lewd acts. You will be born from eggs, covered in moist feathers. Whenever you see humans, you will be frightened and fly up high."
+        "description": "You relied on your wealth and power to act arbitrarily. You committed adultery, ignored generational distinctions and engaged in lewd acts. You will be born from eggs, covered in moist feathers. Whenever you see humans, you will be frightened and fly up high."
     },
     "5": {
         "title": "Path of Water",
-        "description": "Your sin is severe. You made a meal out of fish and shrimp, or made living from them. You will turn into one of fish and shrimp, and will be roasted and deep fried. You should remember any wealth obtained by improper means will be lost in the same way."
+        "description": "Your sin is severe. You made a meal out of fish and shrimp or made living from them. You will turn into one of fish and shrimp and will be roasted and deep fried. You should remember any wealth obtained by improper means will be lost in the same way."
     },
     "6": {
         "title": "Avici Hell",
