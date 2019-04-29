@@ -23,18 +23,13 @@
  }
 
  #text-area {
-     height: 70vh;
+     height: 80vh;
      width: 90vw;
  }
 
- #spacer {
-     width: 90vw;
-     height: 10vh;
- }
 
  #buttons {
      width: 50vw;
-     height: auto;
      height: 10vh;
      margin-bottom: 5vh;
  }
