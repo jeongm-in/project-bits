@@ -84,7 +84,7 @@ let HELL = {
         , "marked": "false"
     },
     "14": {
-        "title": "Tounge Extraction Field",
+        "title": "Tongue Extraction Field",
         "subitle": "Peoples' chests are opened up and tounges are extracted.",
         "description": "Sinners who used their talent at writing to deceive officials and bamboozle superiors, sinners who used their smart mouths to spread lies, slander and talk black into white will suffer here."
         , "marked": "false"
@@ -96,7 +96,7 @@ let HELL = {
         , "marked": "false"
     },
     "16": {
-        "title": "Village of Viscious Dogs",
+        "title": "Village of Vicious Dogs",
         "subitle": "Dogs that resemble tigers rush at sinners.",
         "description": "Sinners who conducted malicious affairs in secret chambers, had sex with married women, did not worship gods are sent here to escape from ferocious dogs forever."
         , "marked": "false"
