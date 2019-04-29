@@ -1,10 +1,12 @@
  #title {
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      text-align: center;
+     font-size: 20px;
  }
 
  #description {
      font-family: 'PT Sans', sans-serif;
+     font-size:16px;
  }
 
  body {
